@@ -63,3 +63,19 @@ const tshirts = [
     quantity: 1
   }
 ]
+
+function Title ({ title }) {
+  return (<h2>{title}</h2>)
+}
+
+function Image ({ src, alt}) {
+  return (<img src={src} alt={alt} />)
+}
+
+function Stock ({ stock }) {
+  return (<em>{stock > 0 ? `${stock} remaining` : "Out of Stock"}</em>);
+}
+function Product({ product }) {
+  const [stock, setStock] = React.useState(product.stock);
+  const [quantity, setQuantity] = React.useState(1);
+}
